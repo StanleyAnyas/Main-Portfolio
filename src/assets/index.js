@@ -14,6 +14,7 @@ import customerList from "./customerList.png";
 import todoApp from "./todoApp.png"
 import blog from "./blog.png"
 import tip from "./tip.png"
+import Anyassor_Stanley_Developer from "./resume.pdf"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -74,5 +75,6 @@ export {
   todoApp,
   customerList,
   blog,
-  tip
+  tip,
+  Anyassor_Stanley_Developer
 };
