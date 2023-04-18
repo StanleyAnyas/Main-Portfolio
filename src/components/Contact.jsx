@@ -31,6 +31,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (!form.name || !form.email || !form.message) {
+      alert('Please fill in all fields')
+      return
+    }else if(!form.email.includes('@')){
+      alert('Please enter a valid email address')
+      return
+    }else{
     setLoading(true)
     emailjs.send(
       'service_8a6i4he',
@@ -54,6 +61,7 @@ const Contact = () => {
       alert('Message not sent, please try again')
       console.log(error.text)
     })
+  }
   }
   return (
     <div

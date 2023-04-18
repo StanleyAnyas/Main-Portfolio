@@ -15,9 +15,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
       <Tilt 
-        options={{ max: 50, scale: 1.05, speed: 500 }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full'>
-        <div className='relative w-full h-[300px]'>
+        options={{ max: 45, scale: 1, speed: 450 }}
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
+        <div className='relative w-full h-[230px]'>
           <img src={image} alt={name} 
           className='w-full h-full object-cover rounded-2xl' />
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -63,7 +63,7 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-2-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following are some of the projects I have worked on. 
           I have also worked on some other projects which are not listed here.
@@ -74,7 +74,7 @@ const Works = () => {
         </motion.p>
       </div>
       {/* look at the w-full */}
-      <div className='w-full flex flex-wrap gap-7 mt-10'>
+      <div className='flex flex-wrap gap-7 mt-20'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
