@@ -12,7 +12,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
   
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      // variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
       <Tilt 
         options={{ max: 45, scale: 1, speed: 450 }}
@@ -55,7 +55,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div 
+        // variants={textVariant()}
+      >
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
