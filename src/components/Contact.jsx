@@ -7,19 +7,25 @@ import { slideIn } from '../utils/motion'
 import { SectionWrapper } from '../hoc'
 import EarthCanvas from './canvas/Earth'
 
-// template_jha15q1
-
-// service_8a6i4he
-
-// 00cnxZY9BRdz_pwJ8
 const Contact = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
+    file: '',
   })
   const formRef = useRef()
   const [loading, setLoading] = useState(false)
+  const [file, setFile] = useState(null)
+
+  const handleFileChange = (e) => {
+    e.preventDefault()
+    setFile(e.target.files[0])
+    setForm({
+      ...form,
+      file: e.target.files[0],
+    })
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -29,10 +35,20 @@ const Contact = () => {
     })
   }
 
+  const handleFileUpload = (e) => {
+    e.preventDefault()
+    if(!file){
+      alert('Please select a file')
+      return
+    }
+    const formData = new FormData()
+    formData.append('file', file)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) {
-      alert('Please fill in all fields')
+      alert('Please fill in all the required fields')
       return
     }else if(!form.email.includes('@')){
       alert('Please enter a valid email address')
@@ -47,6 +63,7 @@ const Contact = () => {
       to_name: 'Stanley Anyas',
       from_email: form.email,
       message: form.message,
+      file: form.file,
       to_email: 'anyassorstanley@gmail.com',
     }, 
     '00cnxZY9BRdz_pwJ8'
@@ -79,13 +96,16 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>
           Contact.
         </h3>
+        <p>
+          Sections with <span className=" text-red-700"> * </span> are required
+        </p>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
           <label className='flex flex-col'>
-            <span className="text-white font-medium mb-4">Name</span>
+            <span className="text-white font-medium mb-4">Name <span className=" text-red-700"> * </span></span>
             <input
               type="text"
               name="name"
@@ -97,7 +117,7 @@ const Contact = () => {
           </label>
 
           <label className='flex flex-col'>
-            <span className="text-white font-medium mb-4">Email</span>
+            <span className="text-white font-medium mb-4">Email <span className=" text-red-700"> * </span></span>
             <input
               type="email"
               name="email"
@@ -109,7 +129,7 @@ const Contact = () => {
           </label>
 
           <label className='flex flex-col'>
-            <span className="text-white font-medium mb-4">Your message</span>
+            <span className="text-white font-medium mb-4">Your message <span className=" text-red-700"> * </span></span>
             <textarea
               rows="8"
               name="message"
@@ -118,6 +138,23 @@ const Contact = () => {
               placeholder="What do you want to talk about?"
               className="bg-tertiary py-4 px-6 placeholder-text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+          </label>
+
+          <label className='flex flex-col'>
+            <span className="text-white font-medium mb-4">Upload file</span>
+            <input
+              type="file"
+              name="file"
+              className="bg-tertiary py-4 px-6 placeholder-text-secondary text-white rounded-lg outline-none border-none font-medium"
+              onChange={handleFileChange}
+            />
+            <button
+              type="button"
+              className="bg-white py-2 px-4 outline-none w-fit text-tertiary font-medium shadow-md shadow-primary rounded-xl mt-4"
+              onClick={handleFileUpload}
+            >
+              Upload
+            </button>
           </label>
           <button
             type="submit"
