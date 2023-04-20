@@ -47,6 +47,10 @@ import {
     {
       id: "cv",
       title: "CV"
+    },
+    {
+      id: "certificates",
+      title: "Certificates"
     }
   ];
   
@@ -323,5 +327,38 @@ import {
       source_code_link: "https://github.com/StanleyAnyas/Tip-calculator",
     },
   ];
+
+  const certificates = [
+    {
+      name: "Javascript",
+      institution: "freeCodeCamp",
+      learnt: "Data structure and Algorithm.",
+      image: javascript
+    },
+    {
+      name: "React.js",
+      institution: "Metropolia UAS Helsinki Finland",
+      learnt: "Frontend development with React.js and styling with Material UI.",
+      image: reactjs
+    },
+    {
+      name: "Node.js",
+      institution: "Metropolia UAS Helsinki Finland",
+      learnt: "Backend development with Node.js and Express.js, Building RestAPI, using MongoDB to store data and retrive data, securing app with Helmet, styling with the CSS framework Bootstrap.",
+      image: nodejs
+    },
+    {
+      name: "Javascript",
+      institution: "Metropolia UAS Helsinki Finland",
+      learnt: "Basics of Javascript, complex features of Javascript, Algorithm.",
+      image: javascript
+    },
+    {
+      name: "Backend Development",
+      institution: "freeCodeCamp",
+      learnt: "Backend development",
+      image: backend
+    }
+  ]
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, testimonials, projects, certificates };

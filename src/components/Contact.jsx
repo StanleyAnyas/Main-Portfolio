@@ -97,7 +97,7 @@ const Contact = () => {
           Contact.
         </h3>
         <p>
-          Sections with <span className=" text-red-700"> * </span> are required
+          Fields with <span className=" text-red-700"> * </span> are required
         </p>
         <form
           ref={formRef}
