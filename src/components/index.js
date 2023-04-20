@@ -9,6 +9,7 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Resume from './Resume';
 import Certificates from './Certificates';
+import Socials from './Socials';
 
 export {
   Hero,
@@ -24,5 +25,6 @@ export {
   ComputersCanvas, 
   StarsCanvas,
   Resume,
-  Certificates
+  Certificates,
+  Socials
 }
