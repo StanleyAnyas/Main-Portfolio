@@ -79,6 +79,13 @@ const Contact = () => {
       console.log(error.text)
     })
   }
+  setForm({
+    name: '',
+    email: '',
+    message: '',
+    file: '',
+  })
+  setFile(null)
   }
   return (
     <div

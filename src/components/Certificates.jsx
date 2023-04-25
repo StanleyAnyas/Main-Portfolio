@@ -26,14 +26,14 @@ const CertificationCard = ({name, learnt, institution, image}) => {
                     <h3
                         className='text-white text-[25px] font-bold'>{name}</h3>
                     <p
-                        className='text-secondary text-[18px] mt-3'
-                    >{institution}</p>
+                        className='text-white text-[18px] mt-3'
+                    >{institution}.</p>
                     <p
                         className='text-white text-[20px] font-medium mt-3'
                     > {readMore ? learnt : learnt.slice(0, 100) + '...'}
                     {learnt.length > 1 && (
                         <span
-                            className='text-blue-500 m1-1 text-[18px] cursor-pointer'
+                            className='text-secondary m1-1 text-[18px] cursor-pointer'
                             onClick={() => toggleReadMore(!readMore)}
                         >{readMore ? '  show less' : ' continue reading...'}</span>
                     )}
