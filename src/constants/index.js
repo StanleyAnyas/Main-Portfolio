@@ -29,7 +29,8 @@ import {
     customerList,
     blog,
     tip,
-    php
+    php,
+    firebase
   } from "../assets";
  import ColorMode from "../components/ColorMode";
   
@@ -126,6 +127,10 @@ import {
     {
       name: "PHP",
       icon: php,
+    },
+    {
+      name: "Firebase",
+      icon: firebase,
     }
   ];
   

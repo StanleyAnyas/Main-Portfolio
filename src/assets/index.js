@@ -16,6 +16,7 @@ import blog from "./blog.png"
 import tip from "./tip.png"
 import Anyassor_Stanley_Developer from "./resume.pdf"
 import php from "./php.png"
+import firebase from "./firebase.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -78,5 +79,6 @@ export {
   blog,
   tip,
   Anyassor_Stanley_Developer,
-  php
+  php,
+  firebase
 };
