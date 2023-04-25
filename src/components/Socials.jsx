@@ -10,7 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 function Socials() {
     return (
         <>
-          <p className={styles.sectionSubText}>MY SOCIALS</p>
+          <p className={styles.heroSubText}>MY SOCIALS.</p>
           <div className='w-full flex'>
             <motion.div className='mt-3 text-secondary text-[17px] max-w-3xl leading-[28px]'>
                 You can also connect with me on my social media handles:
