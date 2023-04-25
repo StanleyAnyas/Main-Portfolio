@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Socials() {
     return (
@@ -30,6 +31,11 @@ function Socials() {
                 onClick={() => window.open("https://www.linkedin.com/in/anyassor-stanley/", "_blank")}
             >
                 <LinkedInIcon fontSize='large' className="mx-1 my-6 cursor-pointer" />
+            </div>
+            <div
+                onClick={() => window.open("https://github.com/StanleyAnyas?tab=repositories", "_blank")}
+            >
+                <GitHubIcon fontSize='large' className="mx-1 my-6 cursor-pointer" />
             </div>
           </div>
         </>
