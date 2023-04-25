@@ -28,8 +28,10 @@ import {
     todoApp,
     customerList,
     blog,
-    tip
+    tip,
+    php
   } from "../assets";
+ import ColorMode from "../components/ColorMode";
   
   export const navLinks = [
     {
@@ -51,6 +53,9 @@ import {
     {
       id: "certificates",
       title: "Certificates"
+    },
+    {
+
     }
   ];
   
@@ -118,6 +123,10 @@ import {
       name: "git",
       icon: git,
     },
+    {
+      name: "PHP",
+      icon: php,
+    }
   ];
   
   const experiences = [
@@ -358,6 +367,12 @@ import {
       institution: "freeCodeCamp",
       learnt: "Backend development",
       image: backend
+    },
+    {
+      name: "PHP",
+      institution: "Metropolia UAS Helsinki Finland",
+      learnt: "Basics of PHP, complex features of PHP, File handling, Database handling, Managing sessions, Managing cookies, Securing PHP, Building RestAPI, Managing permanent data with MySQL.",
+      image: php
     }
   ]
   
