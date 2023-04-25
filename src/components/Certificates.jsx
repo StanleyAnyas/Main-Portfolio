@@ -7,6 +7,12 @@ import { styles } from '../style'
 import { fadeIn, textVariant } from '../utils/motion'
 
 const CertificationCard = ({name, learnt, institution, image}) => {
+    // implement a read more button
+    const [readMore, setReadMore] = React.useState(false)
+
+    const toggleReadMore = (value) => {
+        setReadMore(value)
+    }
     return (
         <motion.div>
             <Tilt 
@@ -22,8 +28,15 @@ const CertificationCard = ({name, learnt, institution, image}) => {
                     <p
                         className='text-secondary text-[18px] mt-3'
                     >{institution}</p>
-                    <p className='text-white text-[20px] font-medium mt-3'>
-                        {`Where I learnt => ${learnt}`}
+                    <p
+                        className='text-white text-[20px] font-medium mt-3'
+                    > {readMore ? learnt : learnt.slice(0, 100) + '...'}
+                    {learnt.length > 1 && (
+                        <span
+                            className='text-blue-500 m1-1 text-[18px] cursor-pointer'
+                            onClick={() => toggleReadMore(!readMore)}
+                        >{readMore ? '  show less' : ' continue reading...'}</span>
+                    )}
                     </p>
                 </div>
             </Tilt>
