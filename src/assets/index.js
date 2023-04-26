@@ -79,8 +79,6 @@ export {
   blog,
   tip,
   php,
-  firebase,
   Anyassor_Stanley_Developer2,
-  php,
   firebase
 };
