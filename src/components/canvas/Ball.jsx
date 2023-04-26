@@ -1,8 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import { Suspense } from 'react'
 import CanvasLoader from '../CanvasLoader'
+import PropTypes from 'prop-types';
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
+
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl])
@@ -37,8 +42,32 @@ const Ball = (props) => {
   )
 }
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon, name }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
+    <Tooltip
+      title={name}
+      position="top"
+      trigger="mouseenter"
+      arrow={true}
+      open={isHovered}
+      hideOnClick={false}
+      >
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="w-28 h-28"
+        >
+
     <Canvas
       frameloop='demand'
       gl={{ preserveDrawingBuffer: true }}
@@ -50,7 +79,14 @@ const BallCanvas = ({ icon }) => {
 
       <Preload all />
     </Canvas>
+    </div>
+    </Tooltip>
   )
 }
+
+BallCanvas.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default BallCanvas
