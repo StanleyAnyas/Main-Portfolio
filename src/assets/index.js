@@ -14,9 +14,9 @@ import customerList from "./customerList.png";
 import todoApp from "./todoApp.png"
 import blog from "./blog.png"
 import tip from "./tip.png"
-import Anyassor_Stanley_Developer from "./resume.pdf"
 import php from "./php.png"
 import firebase from "./firebase.png"
+import Anyassor_Stanley_Developer2 from "./resume2.pdf"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -78,7 +78,7 @@ export {
   customerList,
   blog,
   tip,
-  Anyassor_Stanley_Developer,
   php,
-  firebase
+  firebase,
+  Anyassor_Stanley_Developer2
 };
