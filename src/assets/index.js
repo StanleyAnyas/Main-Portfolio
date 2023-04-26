@@ -81,6 +81,5 @@ export {
   php,
   firebase,
   Anyassor_Stanley_Developer2,
-  php,
   firebase
 };
