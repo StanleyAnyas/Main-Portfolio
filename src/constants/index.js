@@ -122,16 +122,29 @@ import {
   
   const experiences = [
     {
-      
+      title: "React.js Developer",
+      company: "Freelance",
+      date: "2022 - Present",
     },
     {
-     
+      title: "React Native Developer",
+      company: "Freelance",
+      date: "2022 - Present",
     },
     {
-    
+      title: "Fullstack Developer",
+      company: "Freelance",
+      date: "2022 - Present",
     },
     {
-      
+      title: "PHP Developer",
+      company: "Freelance",
+      date: "2023 - Present",
+    },
+    {
+      title: "Blog Writer",
+      company: "Freelance",
+      date: "2022 - Present",
     },
   ];
   
