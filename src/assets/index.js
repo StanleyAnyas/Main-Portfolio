@@ -29,6 +29,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import materialui from "./tech/material.png";
 import sql from "./tech/sql.png";
+import python from "./tech/python.png";
 
 export {
   logo,
@@ -59,5 +60,6 @@ export {
   Anyassor_Stanley_Developer2,
   materialui,
   firebase,
-  sql
+  sql,
+  python
 };

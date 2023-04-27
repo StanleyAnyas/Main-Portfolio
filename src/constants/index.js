@@ -5,7 +5,6 @@ import {
     javascript,
     typescript,
     html,
-    css,
     reactjs,
     tailwind,
     nodejs,
@@ -20,7 +19,8 @@ import {
     php,
     firebase,
     materialui,
-    sql
+    sql,
+    python
   } from "../assets";
  import ColorMode from "../components/ColorMode";
   
@@ -71,8 +71,8 @@ import {
       icon: html,
     },
     {
-      name: "CSS 3",
-      icon: css,
+      name: "Tailwind CSS",
+      icon: tailwind,
     },
     {
       name: "JavaScript",
@@ -85,10 +85,6 @@ import {
     {
       name: "React JS",
       icon: reactjs,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
     },
     {
       name: "Node JS",
@@ -117,6 +113,10 @@ import {
     {
       name: "Material UI",
       icon: materialui
+    },
+    {
+      name: "Python",
+      icon: python
     }
   ];
   
@@ -322,6 +322,12 @@ import {
       institution: "Metropolia UAS Helsinki Finland",
       learnt: "Basics of PHP, complex features of PHP, File handling, Database handling, Managing sessions, Managing cookies, Securing PHP, Building RestAPI, Managing permanent data with MySQL.",
       image: php
+    }, 
+    {
+      name: "SQL and Relational Databases",
+      institution: "Metropolia UAS Helsinki Finland",
+      learnt: "Learnt how to create database, create table, insert data into table, update data in table, delete data in table, select data from table, join tables, aggregate functions, subqueries, views, stored procedures, triggers, transactions, indexes, user management, securing database.",
+      image: sql
     }
   ]
   
