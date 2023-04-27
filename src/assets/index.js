@@ -58,5 +58,6 @@ export {
   php,
   Anyassor_Stanley_Developer2,
   materialui,
+  firebase,
   sql
 };
