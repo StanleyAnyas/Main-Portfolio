@@ -35,7 +35,7 @@ const CertificationCard = ({name, learnt, institution, image}) => {
                         <span
                             className='text-secondary m1-1 text-[18px] cursor-pointer'
                             onClick={() => toggleReadMore(!readMore)}
-                        >{readMore ? '  show less' : ' continue reading...'}</span>
+                        >{readMore ? '  show less' : ' continue reading....'}</span>
                     )}
                     </p>
                 </div>
